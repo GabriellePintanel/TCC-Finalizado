@@ -1,0 +1,36 @@
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: invernada
+  threads:
+    virtual:
+      enabled: true
+  security:
+    oauth2:
+      resource-id: invernada-web
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090/realms/invernada
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+  datasource:
+    url: jdbc:h2:mem:invernadadb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+  sql:
+    init:
+      mode: always
+  test:
+    mockmvc:
+      print: none
