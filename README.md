@@ -1,4 +1,4 @@
-💃 #**Sistema de Gerenciamento de Invernadas Artísticas com RFID**
+# 💃 Sistema de Gerenciamento de Invernadas Artísticas com RFID
 
 Este projeto propõe uma solução tecnológica para a modernização da gestão de invernadas artísticas nos Centros de Tradições Gaúchas (CTGs), integrando hardware, tags RFID e uma API web com uma interface moderna para facilitar o controle de pilchas, registro de notas de rodeios, calendário de eventos e geração de gráficos de desempenho das invernadas nos rodeios.
 
